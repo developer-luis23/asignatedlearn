@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>🌟 Master Chef del Inglés - Guía de Vacaciones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF6B35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <!-- HEADER CON PROGRESO -->
+    <header class="app-header">
+        <div class="header-top">
+            <h1>🍳 Master Chef del Inglés</h1>
+            <button id="exportBtn" class="btn-export" title="Exportar resultados">
+                📊 Exportar
+            </button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div class="student-info">
+            <span>👩‍🎓 Estudiante: <span id="studentName">[Nombre]</span></span>
+            <span>⭐ Puntos: <span id="totalPoints">0</span></span>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN POR SEMANAS -->
+    <nav class="week-navigation">
+        <button class="week-btn active" data-week="0">📅 Semana 1</button>
+        <button class="week-btn" data-week="1">📅 Semana 2</button>
+        <button class="week-btn" data-week="2">📅 Semana 3</button>
+        <button class="week-btn" data-week="3">📅 Semana 4</button>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main id="appContent">
+        <!-- Aquí se renderiza cada semana dinámicamente -->
+    </main>
+
+    <!-- MODAL PARA CHECK-IN EMOCIONAL -->
+    <div id="emotionModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎭 ¿Cómo te sientes hoy?</h2>
+            <div class="emotion-grid">
+                <button class="emotion-btn" data-emotion="😊">😊 <span>¡Genial!</span></button>
+                <button class="emotion-btn" data-emotion="🙂">🙂 <span>Bien</span></button>
+                <button class="emotion-btn" data-emotion="🤔">🤔 <span>Confundida</span></button>
+                <button class="emotion-btn" data-emotion="😅">😅 <span>Estresada</span></button>
+                <button class="emotion-btn" data-emotion="😴">😴 <span>Cansada</span></button>
+            </div>
+            <textarea id="emotionNote" placeholder="¿Qué fue lo que más te costó? (Opcional)"></textarea>
+            <button id="saveEmotion" class="btn-primary">Guardar sentimiento 💾</button>
+        </div>
+    </div>
+
+    <!-- MODAL PARA EJERCICIOS -->
+    <div id="exerciseModal" class="modal hidden">
+        <div class="modal-content modal-large">
+            <h2 id="exerciseTitle">🧩 Ejercicio</h2>
+            <div id="exerciseContent"></div>
+            <div class="modal-actions">
+                <button id="checkExercise" class="btn-primary">✅ Verificar</button>
+                <button id="closeExercise" class="btn-secondary">❌ Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

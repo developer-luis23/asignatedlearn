@@ -1,0 +1,21 @@
+{
+    "name": "Master Chef del Inglés",
+    "short_name": "English Chef",
+    "description": "Guía interactiva de inglés con oficios del hogar",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#F7F9FC",
+    "theme_color": "#FF6B35",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
